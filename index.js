@@ -93,21 +93,77 @@
 
  // Пустий квадрат
 
-  let userEmptyPrompt = Number(prompt('Ведіть розмір фігури'));
+//   let userEmptyPrompt = Number(prompt('Ведіть розмір фігури'));
 
- drawEmptySquare(userEmptyPrompt);
+//  drawEmptySquare(userEmptyPrompt);
 
- function drawEmptySquare(dimension1) {
+//  function drawEmptySquare(dimension1) {
+//         let str3 = '';
+//     for (let j = 0; j < dimension1; j++){
+//         for (let i = 0; i < dimension1; i++) {
+//             if (j === 0 || j === dimension1 - 1 || i === 0 || i === dimension1 - 1) {  // якщо поточна ітерація циклу - це рамка, то малюємо зірочку
+//                 str3 += '@ ';
+//             } else {  // інакше - малюємо проюіл
+//                 str3 += '  ';
+//             }            
+//         }
+//         str3 += '\n';
+//     }
+//     console.log(str3);
+//  }
+
+
+ // Трикутник 
+
+ let str1 = '';
+for (let k = 1; k <= 7; k++) {
+    for (let i = 1; i < k; i++) {
+        str1 += '*';
+    }
+    str1 += '\n';
+
+}
+console.log(str1)
+
+// 
+
+  let userDiagonalPrompt = Number(prompt('Ведіть розмір квадрату'));
+// debugger;
+ drawDiagonalSquare(userDiagonalPrompt);
+
+ function drawDiagonalSquare(dimension1) {
         let str3 = '';
     for (let j = 0; j < dimension1; j++){
         for (let i = 0; i < dimension1; i++) {
-            if (j === 0 || j === dimension1 - 1 || i === 0 || i === dimension1 - 1) {  // якщо поточна ітерація циклу - це рамка, то малюємо зірочку
+            if (j === 0 || j === dimension1 - 1 || i === 0 || i === dimension1 - 1 || j === i) {  
                 str3 += '@ ';
-            } else {  // інакше - малюємо проюіл
+            } else {
                 str3 += '  ';
             }            
         }
         str3 += '\n';
     }
     console.log(str3);
+ }
+
+
+//
+
+ let userReverseDiagonalPrompt = Number(prompt('Ведіть ще раз розмір квадрату'));
+
+ drawReverseDiagonalSquare(userReverseDiagonalPrompt);
+
+ function drawReverseDiagonalSquare(dimension) {
+        let str = '';
+    for (let j = 0; j < dimension; j++){
+        for (let i = 0; i < dimension; i++) {
+            if (j === 0 || j === dimension - 1 || i === 0 || i === dimension - 1 || j + i === dimension - 1) {  
+                str += '@ ';
+            } else {
+                str += '  ';
+            }            
+        }
+        str += '\n';
+    }
+    console.log(str);
  }
