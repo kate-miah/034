@@ -221,3 +221,21 @@ console.log(cat);
  /// виділити властивість  age
 
  delete cat.age
+
+
+// Task квітка - різновид, колір, висота, пити, рости -- розквітати, додати віисто, виділити колір
+
+let flower = {
+    type: 'Rose',
+    color: 'White',
+    height: 1,
+    drink: function() {
+        console.log('water')
+    }    
+}
+flower.bloom = function() {
+        console.log('Подивиться на ці квіточки')б
+    }
+flower.height = flower.height + 0.1;
+
+delete flower.color;
