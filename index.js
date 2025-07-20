@@ -127,43 +127,97 @@ console.log(str1)
 
 // 
 
-  let userDiagonalPrompt = Number(prompt('Ведіть розмір квадрату'));
-// debugger;
- drawDiagonalSquare(userDiagonalPrompt);
+//   let userDiagonalPrompt = Number(prompt('Ведіть розмір квадрату'));
+// // debugger;
+//  drawDiagonalSquare(userDiagonalPrompt);
 
- function drawDiagonalSquare(dimension1) {
-        let str3 = '';
-    for (let j = 0; j < dimension1; j++){
-        for (let i = 0; i < dimension1; i++) {
-            if (j === 0 || j === dimension1 - 1 || i === 0 || i === dimension1 - 1 || j === i) {  
-                str3 += '@ ';
-            } else {
-                str3 += '  ';
-            }            
-        }
-        str3 += '\n';
-    }
-    console.log(str3);
- }
+//  function drawDiagonalSquare(dimension1) {
+//         let str3 = '';
+//     for (let j = 0; j < dimension1; j++){
+//         for (let i = 0; i < dimension1; i++) {
+//             if (j === 0 || j === dimension1 - 1 || i === 0 || i === dimension1 - 1 || j === i) {  
+//                 str3 += '@ ';
+//             } else {
+//                 str3 += '  ';
+//             }            
+//         }
+//         str3 += '\n';
+//     }
+//     console.log(str3);
+//  }
 
 
 //
 
- let userReverseDiagonalPrompt = Number(prompt('Ведіть ще раз розмір квадрату'));
+//  let userReverseDiagonalPrompt = Number(prompt('Ведіть ще раз розмір квадрату'));
 
- drawReverseDiagonalSquare(userReverseDiagonalPrompt);
+//  drawReverseDiagonalSquare(userReverseDiagonalPrompt);
 
- function drawReverseDiagonalSquare(dimension) {
-        let str = '';
-    for (let j = 0; j < dimension; j++){
-        for (let i = 0; i < dimension; i++) {
-            if (j === 0 || j === dimension - 1 || i === 0 || i === dimension - 1 || j + i === dimension - 1) {  
-                str += '@ ';
-            } else {
-                str += '  ';
-            }            
-        }
-        str += '\n';
+//  function drawReverseDiagonalSquare(dimension) {
+//         let str = '';
+//     for (let j = 0; j < dimension; j++){
+//         for (let i = 0; i < dimension; i++) {
+//             if (j === 0 || j === dimension - 1 || i === 0 || i === dimension - 1 || j + i === dimension - 1) {  
+//                 str += '@ ';
+//             } else {
+//                 str += '  ';
+//             }            
+//         }
+//         str += '\n';
+//     }
+//     console.log(str);
+//  }
+
+
+ let monitor = {
+    display: 27,
+    brightness:200,
+    aspectRatio: '16:9',
+    on: function() {
+        console.log('Наш монитор работает')
     }
-    console.log(str);
  }
+
+
+ let cat = {
+    name: 'Red',
+    color: 'red',
+    eueColor: 'yellow',
+    weight: 7,
+    age: 11,
+    meow: function() {
+        console.log('МЯЯЯЯУУУУУУУУУУУУ')
+    },
+    run: function() {
+        console.log('ТИГДИК-ТИГДИК')
+    },
+    eat: function() {
+        console.log('НЯМ-НЯМ-НЯМ')
+    },
+    girlfriend: {
+        name: 'Kyzya',
+        color: 'white-black',
+        eyeColor: 'green'
+    }
+ }
+
+// Отримання значння з об'єкту ---- READ
+
+cat.color
+
+console.log(cat);
+
+// десь отут котику стукнуло 12 рочків
+
+ cat.age = cat.age +1 //або  //// URDATE
+ //cat.age++
+
+ console.log(cat);
+
+ // тупер хочу додати котику нову властмвість
+
+ cat.favouriteFood = 'tune' /// CREATE
+
+ /// виділити властивість  age
+
+ delete cat.age
