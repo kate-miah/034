@@ -234,7 +234,7 @@ let flower = {
     }    
 }
 flower.bloom = function() {
-        console.log('Подивиться на ці квіточки')б
+        console.log('Подивиться на ці квіточки')
     }
 flower.height = flower.height + 0.1;
 
